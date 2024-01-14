@@ -1,3 +1,6 @@
+#This code will direct an attacker to decoysystem
+
+
 import ascyncio, asyncssh,crypt, sys, time, random
 
 def handle_client(process):
