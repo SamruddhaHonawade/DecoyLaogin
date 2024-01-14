@@ -42,6 +42,7 @@ def analyzePacket(p):
             FTPAnalysis(p)
         elif (p[TCP].sport == 22):
             SSHAnalysis(p)
+            #UNDER WORKING
 
 def printResult(openConns,failed,protocol):
     print("open %s Connections: % protocol")
@@ -55,4 +56,5 @@ def printResult(openConns,failed,protocol):
     for f in failed:
         print("\t%s: %d" % (f,failed[f]))
         
-
+sniff(offline="bruteforce.pcap",prn=analyzePacket)
+printResults(FTPconns,failedFTP,"FTP")
