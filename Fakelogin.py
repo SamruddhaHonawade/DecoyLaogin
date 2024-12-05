@@ -1,10 +1,11 @@
-#This code will direct an attacker to decoysystem
+#This code will direct an attacker to decoys
 
 
 import ascyncio, asyncssh,crypt, sys, time, random
 
 def handle_client(process):
     process.exit(0)
+    print('sam')
 
 class MySSHServer(asyncssh.SSHSserver):
     def connection_made(self, conn):
